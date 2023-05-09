@@ -1,5 +1,5 @@
 import * as S from './styled';
-import CreatItemBox from './CreatItemBoxx';
+import CreatItemBox from './CreatItemBox';
 function Todos() {
   return (
     <S.Container>

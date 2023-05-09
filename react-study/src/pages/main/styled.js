@@ -33,5 +33,9 @@ export const MainWrapper = styled.div`
     &:hover {
       background: #d6d6d6;
     }
+    > a {
+      color: #000;
+      text-decoration: none;
+    }
   }
 `;
