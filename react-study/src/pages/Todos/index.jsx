@@ -7,14 +7,16 @@ import ItemList from './ItemList';
 
 function Todos() {
   const [TodoName, setTodoName] = useState('');
-  const [items, setItems] = useState([]);
-
+  const [todos, setTodos] = useState([]);
+  const createTodo = () => {
+    setTodos(prevState => [...prevState, { id: prevState.length, name: TodoName }]);
+  };
   return (
     <S.Container>
       <S.Title>To do list</S.Title>
       {TodoName}
-      <CreatItemBox onChange={setTodoName} />
-      <ItemList />
+      <CreatItemBox onChange={setTodoName} createTodoItem={createTodo} />
+      <ItemList todos={todos} />
     </S.Container>
   );
 }

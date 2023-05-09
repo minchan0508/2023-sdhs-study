@@ -11,7 +11,7 @@ export const InputBox = styled.div`
     flex-shrink: 0;
     padding: 4px 8px;
     border: none;
-    cursor: ponter;
+    cursor: pointer;
   }
 `;
 export const Input = styled.input`
