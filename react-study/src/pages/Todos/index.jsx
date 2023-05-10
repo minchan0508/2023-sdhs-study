@@ -14,7 +14,8 @@ function Todos() {
     TodoName && setTodos(prevState => [...prevState, { id: prevState.length, name: TodoName }]);
   };
   const deleteTodo = id => {
-    const arr =  
+    const arr = todos.filter(e => e.id != id);
+    setTodos(arr);
   };
 
   return (
