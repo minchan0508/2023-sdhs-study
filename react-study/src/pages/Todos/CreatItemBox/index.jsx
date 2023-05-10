@@ -10,7 +10,7 @@ function CreatItemBox({ value, onChange, createTodoItem }) {
     <S.InputBox>
       <S.Input value={value} placeholder='To do를 입력해주세요.' onChange={handleInputValue} />
       <Button onClick={createTodoItem}>등록</Button>
-    </S.InputBox>dads
+    </S.InputBox>
   );
 }
 export default CreatItemBox;
