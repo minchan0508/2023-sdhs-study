@@ -10,5 +10,4 @@ function Todo(props) {
     </S.Container>
   );
 }
-
 export default Todo;
