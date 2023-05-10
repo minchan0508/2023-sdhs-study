@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import * as S from './styled';
 
-import CreatItemBox from './CreatItemBox';
+import CreateItemBox from './CreatItemBox';
 import ItemList from './ItemList';
 
 function Todos() {
@@ -10,13 +10,18 @@ function Todos() {
   const [todos, setTodos] = useState([]);
   const createTodo = () => {
     setTodoName('');
-    setTodos(prevState => [...prevState, { id: prevState.length, name: TodoName }]);
+    // if(TodoName != '') setTodos(prevState => [...prevState, { id: prevState.length, name: TodoName }]);
+    TodoName && setTodos(prevState => [...prevState, { id: prevState.length, name: TodoName }]);
   };
+  const deleteTodo = id => {
+    const arr =  
+  };
+
   return (
     <S.Container>
       <S.Title>To do list</S.Title>
-      <CreatItemBox value={TodoName} onChange={setTodoName} createTodoItem={createTodo} />
-      <ItemList todos={todos} />
+      <CreateItemBox value={TodoName} onChange={setTodoName} createTodoItem={createTodo} />
+      <ItemList todos={todos} deleteItem={deleteTodo} />
     </S.Container>
   );
 }
