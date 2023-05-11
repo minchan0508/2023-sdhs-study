@@ -9,7 +9,7 @@ function ItemList({ todos, deleteItem }) {
     <S.ItemList>
       {todos.map(({ id, name }) => {
         return (
-          <Todo key={id} todos={todos} deleteTodo={() => deleteTodo(id)}>
+          <Todo key={id} todos={todos} deleteTodo={deleteTodo}>
             {name}
           </Todo>
         );
