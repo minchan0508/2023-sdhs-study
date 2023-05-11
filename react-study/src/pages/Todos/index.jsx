@@ -10,12 +10,12 @@ function Todos() {
   const [todos, setTodos] = useState([]);
   const createTodo = () => {
     setTodoName('');
-    if (TodoName.trim() != '')
+    if (TodoName.trim() !== '')
       setTodos(prevState => [...prevState, { id: prevState.length, name: TodoName }]);
     // TodoName && setTodos(prevState => [...prevState, { id: prevState.length, name: TodoName }]);
   };
   const deleteTodo = id => {
-    const arr = todos.filter(e => e.id != id);
+    const arr = todos.filter(e => e.id !== id);
     setTodos(arr);
   };
   useEffect(() => {
