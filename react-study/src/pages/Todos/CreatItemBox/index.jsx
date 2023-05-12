@@ -1,5 +1,4 @@
 import Button from '../../../components/Button';
-
 import * as S from './styled';
 
 function CreatItemBox({ value, onChange, createTodoItem }) {
